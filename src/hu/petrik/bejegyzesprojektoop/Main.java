@@ -18,6 +18,10 @@ public class Main {
         //out.println(bejegyzesek);
         kettoe();
         out.println(bejegyzesek);
+        haroma();
+        haromb();
+        haromc();
+        haromd();
     }
 
     //BEOLVASÁS --------------------------------------------------------------------
@@ -83,5 +87,30 @@ public class Main {
         Scanner sc = new Scanner(in);
         out.print("Adjon meg egy szöveget: ");
         bejegyzesek.get(1).setTartalom(sc.next());
+    }
+
+    public static void haroma(){
+        int legnagyobb = 0;
+        int index = 0;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok() > legnagyobb){
+                legnagyobb = bejegyzesek.get(i).getLikeok();
+                index = i;
+            }
+        }
+        out.print("\nLegnépszerűbb bejegyzés like száma:");
+        out.println(bejegyzesek.get(index).getLikeok());
+    }
+
+    public static void haromb(){
+
+    }
+
+    public static void haromc(){
+
+    }
+
+    public static void haromd(){
+
     }
 }
