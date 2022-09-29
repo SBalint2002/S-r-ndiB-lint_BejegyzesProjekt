@@ -4,19 +4,18 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+
 import static java.lang.System.*;
 
 public class Main {
     public static List<Bejegyzes> bejegyzesek = new ArrayList<>();
     public static void main(String[] args) {
-        bejegyzesek = new ArrayList<>();
         kettoa();
         kettob();
         bekeres();
+
+        kettod();
         out.println(bejegyzesek);
     }
 
@@ -69,5 +68,13 @@ public class Main {
         }catch (InputMismatchException e){
             out.println("Hiba! Nem egész számot adott meg!");
         }
+    }
+
+    public static void kettod(){
+        Random r = new Random();
+        for (int i = 0; i < bejegyzesek.size()*20; i++) {
+            bejegyzesek.get(r.nextInt(bejegyzesek.size())).like();
+        }
+
     }
 }
