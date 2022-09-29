@@ -107,6 +107,7 @@ public class Main {
         for (int i = 0; i < bejegyzesek.size(); i++) {
             if (bejegyzesek.get(i).getLikeok() > 35){
                 vane = true;
+                break;
             }
         }
 
@@ -118,7 +119,14 @@ public class Main {
     }
 
     public static void haromc(){
-
+        boolean vane = false;
+        int szamlalo = 0;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok() < 15){
+                szamlalo++;
+            }
+        }
+        out.println(szamlalo + " darab 15-nél kevesebb likeot kapott bejegyzés van.");
     }
 
     public static void haromd(){
