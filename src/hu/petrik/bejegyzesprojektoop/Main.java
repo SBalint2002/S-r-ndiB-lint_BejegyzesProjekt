@@ -103,7 +103,18 @@ public class Main {
     }
 
     public static void haromb(){
+        boolean vane = false;
+        for (int i = 0; i < bejegyzesek.size(); i++) {
+            if (bejegyzesek.get(i).getLikeok() > 35){
+                vane = true;
+            }
+        }
 
+        if (vane){
+            out.println("\nAz egyik bejegyzés 35 lájknál többet kapott!");
+        }else {
+            out.println("\nEgyik bejegyzés sem kapott 35 lájknál többet!");
+        }
     }
 
     public static void haromc(){
