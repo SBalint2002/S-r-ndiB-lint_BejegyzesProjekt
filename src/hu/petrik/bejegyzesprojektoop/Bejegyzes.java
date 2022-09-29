@@ -2,14 +2,14 @@ package hu.petrik.bejegyzesprojektoop;
 
 import java.time.LocalDateTime;
 
-public class BejegyzesProjekt {
+public class Bejegyzes {
     private String szerzo;
     private String tartalom;
     private int likeok;
     private LocalDateTime letrejott;
     private LocalDateTime szerkesztve;
 
-    public BejegyzesProjekt(String szerzo, String tartalom) {
+    public Bejegyzes(String szerzo, String tartalom) {
         this.szerzo = szerzo;
         this.tartalom = tartalom;
         this.likeok = 0;
