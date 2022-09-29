@@ -1,9 +1,6 @@
 package hu.petrik.bejegyzesprojektoop;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 import static java.lang.System.*;
@@ -130,6 +127,16 @@ public class Main {
     }
 
     public static void haromd(){
+        bejegyzesek.sort((x, y) -> (x.getLikeok() > y.getLikeok()) ? -1 : 1);
+        try {
+            FileWriter fw = new FileWriter("bejegyzesek_rendezett.txt");
+            for (int i = 0; i < bejegyzesek.size(); i++) {
+                fw.write(bejegyzesek.get(i).toString());
+            }
+            fw.close();
+        } catch (IOException e){
+
+        }
 
     }
 }
