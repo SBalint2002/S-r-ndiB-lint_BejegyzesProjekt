@@ -15,7 +15,7 @@ public class Main {
         kettob();
         bekeres();
         kettod();
-        out.println(bejegyzesek);
+        //out.println(bejegyzesek);
         kettoe();
         out.println(bejegyzesek);
     }
