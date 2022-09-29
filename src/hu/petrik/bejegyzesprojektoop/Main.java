@@ -1,5 +1,9 @@
 package hu.petrik.bejegyzesprojektoop;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -12,7 +16,38 @@ public class Main {
         bejegyzesek = new ArrayList<>();
         kettoa();
         kettob();
+        bekeres();
+        out.println(bejegyzesek);
     }
+
+    //BEOLVASÁS --------------------------------------------------------------------
+
+    public static void bekeres() {
+        String fajlNev = "bejegyzesek.csv";
+        try {
+            beolvas(fajlNev);
+        } catch (FileNotFoundException e) {
+            err.printf("Hiba miatt nem található az %s fájl\n", fajlNev);
+        } catch (IOException e) {
+            err.println("Ismeretlen hiba történt a fájl beolvasása során");
+        }
+    }
+
+    public static void beolvas(String fajlNev) throws IOException {
+        FileReader fr = new FileReader(fajlNev);
+        BufferedReader br = new BufferedReader(fr);
+        String sor = br.readLine();
+        while (sor != null && !sor.equals("")) {
+            String[] tomb = sor.split(";");
+            Bejegyzes bejegyzes = new Bejegyzes(tomb[0], tomb[1]);
+            bejegyzesek.add(bejegyzes);
+            sor = br.readLine();
+        }
+        br.close();
+        fr.close();
+    }
+
+    //MÁSODIK FELADAT -------------------------------------------------------
 
     public static void kettoa(){
         bejegyzesek.add(new Bejegyzes("Ágozsga", "VisualStudioban javazni"));

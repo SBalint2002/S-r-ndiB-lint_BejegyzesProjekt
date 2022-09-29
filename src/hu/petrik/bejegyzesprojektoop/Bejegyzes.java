@@ -46,9 +46,9 @@ public class Bejegyzes {
     @Override
     public String toString() {
         if (this.getSzerkesztve().isAfter(this.getLetrejott())){
-            return String.format("%s - %d - %s\nSzerkesztve: %s\n%s",this.getSzerzo(),this.getLikeok(),this.getLetrejott(),this.getSzerkesztve(),this.getTartalom());
+            return String.format("\n\n%s - %d - %s\nSzerkesztve: %s\n%s",this.getSzerzo(),this.getLikeok(),this.getLetrejott(),this.getSzerkesztve(),this.getTartalom());
         }else {
-            return String.format("%s - %d - %s\nSzerkesztve: Nem volt még szerkesztve\n%s",this.getSzerzo(),this.getLikeok(),this.getLetrejott(),this.getTartalom());
+            return String.format("\n\n%s - %d - %s\nSzerkesztve: Nem volt még szerkesztve\n%s",this.getSzerzo(),this.getLikeok(),this.getLetrejott(),this.getTartalom());
         }
     }
 }
