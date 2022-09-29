@@ -42,4 +42,13 @@ public class BejegyzesProjekt {
     public void like(){
         likeok++;
     }
+
+    @Override
+    public String toString() {
+        if (this.getSzerkesztve().isAfter(this.getLetrejott())){
+            return String.format("%s - %d - %s\nSzerkesztve: %s\n%s",this.getSzerzo(),this.getLikeok(),this.getLetrejott(),this.getSzerkesztve(),this.getTartalom());
+        }else {
+            return String.format("%s - %d - %s\nSzerkesztve: Nem volt még szerkesztve\n%s",this.getSzerzo(),this.getLikeok(),this.getLetrejott(),this.getTartalom());
+        }
+    }
 }
