@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dee8b310-d739-4b1f-861e-d9fbad438456" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hu/petrik/bejegyzesprojektoop/Bejegyzes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hu/petrik/bejegyzesprojektoop/BejegyzesProjekt.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hu/petrik/bejegyzesprojektoop/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hu/petrik/bejegyzesprojektoop/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,5 +45,15 @@
       <updated>1664431560624</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
