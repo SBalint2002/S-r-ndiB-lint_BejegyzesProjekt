@@ -14,8 +14,9 @@ public class Main {
         kettoa();
         kettob();
         bekeres();
-
         kettod();
+        out.println(bejegyzesek);
+        kettoe();
         out.println(bejegyzesek);
     }
 
@@ -76,5 +77,11 @@ public class Main {
             bejegyzesek.get(r.nextInt(bejegyzesek.size())).like();
         }
 
+    }
+
+    public static void kettoe(){
+        Scanner sc = new Scanner(in);
+        out.print("Adjon meg egy szöveget: ");
+        bejegyzesek.get(1).setTartalom(sc.next());
     }
 }

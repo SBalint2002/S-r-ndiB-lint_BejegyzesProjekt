@@ -27,6 +27,7 @@ public class Bejegyzes {
 
     public void setTartalom(String tartalom) {
         this.tartalom = tartalom;
+        this.szerkesztve = LocalDateTime.now();
     }
 
     public int getLikeok(){ return this.likeok; }
