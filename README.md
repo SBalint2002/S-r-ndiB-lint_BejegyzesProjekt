@@ -1,1 +1,1 @@
-# S-r-ndiB-lint_BejegyzesProjekt
+# SarandiBalint_BejegyzesProjekt
